@@ -1,0 +1,113 @@
+
+<form #frmUser = "ngForm" (ngSubmit) = "onSubmitForm(frmUser.value)" autocomplete="false" novalidate >
+
+  <div class="form-group">
+    <label for="userName">UserName</label>
+    <input
+        type="text"
+        class="form-control"
+        name = "txtUsername"
+        id="userName"
+        placeholder="UserName"
+        minlength="3"
+        maxlength="20"
+        required = "required"
+        pattern = ""
+        [(ngModel)]="user.username"
+        #username = "ngModel"
+    >
+    <span class="badge badge-danger" *ngIf = "username.errors?.required && username.dirty">
+        Vui lòng nhập userName
+    </span>
+    <span class="badge badge-danger" *ngIf = "username.errors?.minlength && username.dirty">
+      Vui lòng nhập lớn hơn 3 ký tự
+    </span>
+    <span class="badge badge-danger" *ngIf = "username.errors?.maxlength && username.dirty">
+      Vui lòng nhập nhỏ hơn 20 ký tự
+    </span>
+
+  </div>
+
+  <div class="form-group">
+    <label for="passworld">Password</label>
+    <input
+        type="password"
+        class="form-control"
+        name="txtPassword"
+        id="passworld"
+        placeholder="Password"
+        required = "required"
+        [(ngModel)]="user.password"
+        #password = "ngModel"
+    >
+
+    <span class="badge badge-danger" *ngIf = "password.errors?.required && password.dirty">
+      Vui lòng nhập password
+    </span>
+
+  </div>
+
+  <div class="form-group">
+    <label for="fullName">FullName</label>
+    <input
+      type="text"
+      class="form-control"
+      name="txtFullName"
+      id="fullName"
+      placeholder="FullName"
+      required = "required"
+      [(ngModel)]="user.fullname"
+      #fullname = "ngModel"
+    >
+
+    <span class="badge badge-danger" *ngIf = "fullname.errors?.required && fullname.dirty">
+      Vui lòng nhập fullName
+    </span>
+
+  </div>
+
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input
+      type="text"
+      class="form-control"
+      name="txtEmail"
+      id="email"
+      placeholder="Email"
+      required = "required"
+      pattern='^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$'
+      [(ngModel)]="user.email"
+      #email = "ngModel"
+    >
+
+    <span class="badge badge-danger" *ngIf = "email.errors?.required && email.dirty">
+      Vui lòng nhập email
+    </span>
+    <span class="badge badge-danger" *ngIf = "email.errors?.pattern && email.dirty">
+      Sai email rồi
+    </span>
+  </div>
+
+  <div class="form-group">
+    <label for="phone">phone</label>
+    <input
+      type="text"
+      class="form-control"
+      name="txtPhone"
+      id="phone"
+      placeholder="Phone"
+      [(ngModel)]="user.phone"
+      required = "required"
+      #phone = "ngModel"
+    >
+  </div>
+
+  <span class="badge badge-danger" *ngIf = "phone.errors?.required && phone.dirty">
+    Vui lòng nhập điện thoại
+  </span>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+
+  <button type="button" (click) = "reset(frmUser)"  class="btn btn-primary">Submit</button>
+
+</form>

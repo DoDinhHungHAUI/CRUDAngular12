@@ -1,0 +1,78 @@
+
+<form [formGroup] = "frmUser" autocomplete="false" novalidate = "true" (ngSubmit) = "onSubmitForm()">
+
+  <div class="form-group">
+    <label for="userName">UserName</label>
+    <input
+        type="text"
+        class="form-control"
+        name = "txtUsername"
+        id="userName"
+        placeholder="UserName"
+        formControlName = "username"
+    >
+
+  </div>
+
+  <div class="form-group">
+    <label for="passworld">Password</label>
+    <input
+        type="password"
+        class="form-control"
+        name="txtPassword"
+        id="passworld"
+        placeholder="Password"
+        formControlName = "password"
+    >
+
+  </div>
+
+  <div class="form-group">
+    <label for="fullName">FullName</label>
+    <input
+      type="text"
+      class="form-control"
+      name="txtFullName"
+      id="fullName"
+      placeholder="FullName"
+      formControlName = "fullname"
+    >
+
+    <app-error-validate [frmUserName] = "frmUser.controls.fullname" >
+
+    </app-error-validate>
+
+  </div>
+
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input
+      type="text"
+      class="form-control"
+      name="txtEmail"
+      id="email"
+      placeholder="Email"
+      formControlName = "email"
+    >
+
+  </div>
+
+  <div class="form-group">
+    <label for="phone">phone</label>
+    <input
+      type="text"
+      class="form-control"
+      name="txtPhone"
+      id="phone"
+      placeholder="Phone"
+      formControlName = "phone"
+    >
+
+  </div>
+
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+
+  <button type="button" (click) = "reset()"   class="btn btn-primary">Submit</button>
+
+</form>

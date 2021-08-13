@@ -1,0 +1,67 @@
+{
+  "employees": [
+    {
+      "id": 27,
+      "name": "Nguyễn Thu Trang",
+      "age": 21,
+      "gender": "Nữ",
+      "major": "Hệ Thống Thông Tin"
+    },
+    {
+      "id": 28,
+      "name": "Đỗ Đình Hưng",
+      "age": 21,
+      "gender": "Nam",
+      "major": "Hệ Thống Thông Tin"
+    },
+    {
+      "id": 31,
+      "name": "Nguyễn Xuân Hưng",
+      "age": 21,
+      "gender": "Nam",
+      "major": "Khoa Học Máy Tính"
+    },
+    {
+      "id": 32,
+      "name": "Hoàng Thu Phương",
+      "age": 21,
+      "gender": "Nữ",
+      "major": "Công Nghệ Thông Tin"
+    },
+    {
+      "id": 33,
+      "name": "Nguyễn Thị Hồng Nhung",
+      "age": 21,
+      "gender": "Nữ",
+      "major": "Hệ Thống Thông Tin"
+    },
+    {
+      "id": 34,
+      "name": "Tạ Thị Truyền",
+      "age": 21,
+      "gender": "Nữ",
+      "major": "Hệ Thống Thông Tin"
+    },
+    {
+      "id": 35,
+      "name": "Trần Hoàng Mạnh",
+      "age": 21,
+      "gender": "Nam",
+      "major": "Hệ Thống Thông Tin"
+    },
+    {
+      "id": 36,
+      "name": "Hưng Miền Bái Nội",
+      "age": 22,
+      "gender": "Nam",
+      "major": "Khoa Học Máy Tính"
+    },
+    {
+      "id": 37,
+      "name": "Vũ Văn Duy",
+      "age": 21,
+      "gender": "Nam",
+      "major": "Khoa Học Máy Tính"
+    }
+  ]
+}
